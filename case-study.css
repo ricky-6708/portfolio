@@ -1,0 +1,456 @@
+.case-layout {
+    display: grid;
+    grid-template-columns: minmax(180px, 1fr) minmax(0, 3fr);
+    gap: 8%;
+    padding: 74px 0 110px;
+    align-items: start
+}
+
+.case-sidebar {
+    position: sticky;
+    top: 32px
+}
+
+.case-toc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.toc-link {
+    font-size: 16px;
+    line-height: 24px;
+    color: #6b7280;
+    transition: color .2s;
+    display: inline-block;
+    text-decoration: none !important;
+    border-bottom: 1px solid transparent;
+}
+
+.toc-link span {
+    font-variant-numeric: tabular-nums;
+    margin-right: 5px;
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+.toc-link.selected,
+.toc-link:hover {
+    color: #000;
+    font-weight: 500;
+    text-decoration: none !important;
+    border-bottom: 1px solid #000 !important;
+}
+
+.case-sidebar hr {
+    border: 0;
+    border-top: 1px solid #e5e7eb;
+    margin: 28px 0 18px
+}
+
+.back-home {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: .4px;
+    color: #6b7280
+}
+
+.case-intro {
+    padding: 0 0 42px;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 48px
+}
+
+.case-intro h1 {
+    font-size: clamp(52px, 6vw, 76px);
+    line-height: 1.06;
+    letter-spacing: 0px;
+    font-weight: 900;
+    margin: 0 0 22px
+}
+
+.case-deck {
+    font-size: 24px;
+    line-height: 34px;
+    margin: 0;
+    max-width: 900px
+}
+
+.markdown-content {
+    font-size: 18px;
+    line-height: 28px
+}
+
+.markdown-content h2 {
+    font-size: 44px;
+    line-height: 1.13;
+    letter-spacing: .4px;
+    font-weight: 900;
+    margin: 74px 0 20px;
+    padding-top: 10px;
+    scroll-margin-top: 36px !important; /* Forces the H2 to land neatly at the top of the viewport on the first click */
+}
+
+.markdown-content h3 {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: .4px;
+    font-weight: 900;
+    margin: 40px 0 14px;
+    scroll-margin-top: 30px
+}
+
+.markdown-content h4 {
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 700;
+    margin: 32px 0 12px
+}
+
+.markdown-content p {
+    margin: 0 0 22px
+}
+
+.markdown-content ul,
+.markdown-content ol {
+    padding-left: 25px;
+    margin: 0 0 26px
+}
+
+.markdown-content li {
+    padding-left: 3px;
+    margin: 5px 0
+}
+
+.markdown-content strong {
+    font-weight: 700
+}
+
+.markdown-content a {
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px
+}
+
+.markdown-content blockquote {
+    border-left: 2px solid #111;
+    margin: 30px 0;
+    padding: 5px 0 5px 24px;
+    font-size: 23px;
+    line-height: 34px;
+    font-weight: 500
+}
+
+.markdown-content img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    margin: 28px 0 12px
+}
+
+.markdown-content em {
+    display: block;
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: .4px;
+    margin: 8px 0 30px
+}
+
+.table-scroll {
+    overflow-x: auto;
+    margin: 28px 0 36px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px
+}
+
+.markdown-content table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    font-size: 15px;
+    line-height: 23px
+}
+
+.markdown-content th,
+.markdown-content td {
+    text-align: left;
+    padding: 12px 16px;
+    border-bottom: 1px solid #e5e7eb
+}
+
+.markdown-content th {
+    font-weight: 600;
+    background: #f8f8f8
+}
+
+.markdown-content tr:last-child td {
+    border-bottom: 0
+}
+
+.markdown-content>* {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity .6s cubic-bezier(.2, .8, .2, 1) var(--reveal-delay, 0ms), transform .6s cubic-bezier(.2, .8, .2, 1) var(--reveal-delay, 0ms)
+}
+
+.markdown-content>*.is-visible {
+    opacity: 1;
+    transform: none
+}
+
+@media(max-width:760px) {
+    .case-layout {
+        display: block;
+        padding: 36px 0 70px
+    }
+
+    .case-sidebar {
+        position: relative;
+        top: auto;
+        margin-bottom: 42px;
+        padding-bottom: 22px;
+        border-bottom: 1px solid #e5e7eb
+    }
+
+    .case-toc {
+        grid-template-columns: 1fr 1fr;
+        gap: 9px
+    }
+
+    .case-sidebar hr {
+        margin: 18px 0 12px
+    }
+
+    .case-intro h1 {
+        font-size: 48px
+    }
+
+    .case-deck {
+        font-size: 20px;
+        line-height: 30px
+    }
+
+    .markdown-content h2 {
+        font-size: 36px;
+        margin-top: 54px
+    }
+
+    .markdown-content h3 {
+        font-size: 25px
+    }
+
+    .markdown-content {
+        font-size: 17px;
+        line-height: 27px
+    }
+}
+.case-image-block{overflow:hidden;border-radius:16px;padding:100px 0;margin:0}
+.case-image-block img{width:100%;height:auto;object-fit:cover;display:block;border:0;border-radius:16px;margin:0}
+.table-scroll{padding:100px 0;margin:0;border:0;border-radius:0}
+.markdown-content table{border:1px solid #e5e7eb}
+.body-subheading{display:block;font-family:Satoshi,sans-serif;font-weight:700;font-size:18px;line-height:28px;letter-spacing:0;color:#000;margin-top:24px;margin-bottom:12px}
+.metric-emphasis{font-weight:900}
+.metric-bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 28px;
+    padding: 38px 0;
+    margin: 22px 0;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Remove bottom border/padding from the first row when followed by another */
+.metric-bar:has(+ .metric-bar) {
+    border-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Remove top border/padding from the second row */
+.metric-bar + .metric-bar {
+    border-top: 0 !important;
+    padding-top: 20 !important;
+    margin-top: 0 !important;
+}
+.metric-card{display:flex;flex-direction:column;gap:8px}
+.metric-value{font-family:Satoshi,sans-serif;font-size:48px;line-height:56px;font-weight:900;color:#000;font-variant-numeric:tabular-nums}
+.metric-label{font-size:14px;line-height:22px;letter-spacing:.4px;color:#6b7280;text-transform:uppercase}
+.markdown-content > .metric-bar{opacity:1;transform:none}
+@media(max-width:760px){.case-image-block,.table-scroll{padding-top:100px;padding-bottom:20px}.metric-bar{grid-template-columns:1fr 1fr}.metric-value{font-size:38px;line-height:44px}}
+
+.case-study-image-container{overflow:hidden;border-radius:16px;padding-top:30px;padding-bottom:0px;margin:0;border:0}
+.case-study-image-container .case-study-image{width:100%;height:auto;display:block;object-fit:cover;border:0;border-radius:16px;margin:0}
+
+/* 1. Give the image container a clean bottom margin so captions have breathing room */
+.case-study-image-container {
+    overflow: hidden;
+    border-radius: 16px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 20px; /* Controls the exact gap between image and caption */
+    border: 0;
+}
+
+.case-study-image-container .case-study-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border: 0;
+    border-radius: 16px;
+    margin: 0 !important;
+}
+
+/* 2. Captions: Reset paragraph top margin so the container's margin handles the spacing */
+.case-study-image-container + p:has(em),
+.case-study-image-container + em {
+    margin-top: 0 !important;
+    margin-bottom: 28px !important;
+}
+
+.case-study-image-container + p > em,
+.case-study-image-container + em {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: .4px;
+    display: block;
+}
+
+/* 3. Subheadings, regular body copy, or lists following an image without a caption */
+.case-study-image-container + h3,
+.case-study-image-container + h4,
+.case-study-image-container + .body-subheading,
+.case-study-image-container + p:not(:has(em)) {
+    margin-top: 36px !important;
+}
+
+/* Force ordered lists to increment sequential numbers */
+.markdown-content ol {
+    list-style-type: decimal !important;
+    padding-left: 28px !important;
+    margin: 0 0 26px !important;
+}
+
+.markdown-content ol > li {
+    display: list-item !important;
+    padding-left: 4px;
+    margin: 12px 0;
+}
+
+/* Ensure child bullet lists inside ordered lists retain bullet styling */
+.markdown-content ol ul {
+    list-style-type: disc !important;
+    padding-left: 20px !important;
+    margin: 8px 0 12px !important;
+}
+
+/* Global spacing for headings, paragraphs, and divs following images, tables, or captions */
+.markdown-content p:has(img) + h2,
+.markdown-content p:has(img) + h3,
+.markdown-content p:has(img) + h4,
+.markdown-content p:has(img) + .body-subheading,
+.markdown-content p:has(img) + p,
+.markdown-content p:has(img) + div,
+.case-study-image-container + h2,
+.case-study-image-container + h3,
+.case-study-image-container + h4,
+.case-study-image-container + .body-subheading,
+.case-study-image-container + p,
+.case-study-image-container + div,
+.case-image-block + h2,
+.case-image-block + h3,
+.case-image-block + h4,
+.case-image-block + .body-subheading,
+.case-image-block + p,
+.case-image-block + div,
+.table-scroll + h2,
+.table-scroll + h3,
+.table-scroll + h4,
+.table-scroll + .body-subheading,
+.table-scroll + p,
+.table-scroll + div,
+.markdown-content em + h2,
+.markdown-content em + h3,
+.markdown-content em + h4,
+.markdown-content em + .body-subheading,
+.markdown-content em + p,
+.markdown-content em + div {
+    margin-top: 52px !important;
+}
+
+/* Include paragraphs containing captions (p:has(em)) in your global spacing rules */
+.markdown-content p:has(em) + h2,
+.markdown-content p:has(em) + h3,
+.markdown-content p:has(em) + h4,
+.markdown-content p:has(em) + .body-subheading,
+.markdown-content p:has(em) + p,
+.markdown-content p:has(em) + div,
+
+/* Target the first paragraph following an image container or image */
+.case-study-image-container ~ p:first-of-type,
+.markdown-content p:has(img) ~ p:first-of-type {
+    margin-top: 52px !important;
+}
+
+/* Increase spacing between top-level items in custom ordered lists */
+.markdown-content ol.custom-ordered-list > li {
+    margin-bottom: 28px !important;
+}
+
+.markdown-content ol.custom-ordered-list > li:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Tighten spacing specifically for tables and table scroll wrappers */
+.table-scroll,
+.markdown-content .table-scroll {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    margin-top: 24px !important;
+    margin-bottom: 24px !important;
+}
+
+/* Reduce top margin for any table wrapper or heading that immediately follows another table */
+.table-scroll + .table-scroll,
+.table-scroll + h2,
+.table-scroll + h3,
+.table-scroll + h4,
+.table-scroll + p {
+    margin-top: 24px !important;
+}
+
+/* Reduce the gap directly beneath the Executive Summary heading */
+#section-executive-summary + p,
+#section-executive-summary + ul {
+    margin-top: 4px !important;
+}
+
+/* Add spacing above bullet points that immediately follow an image container */
+.case-study-image-container + ul,
+.case-study-image-container + ol {
+    margin-top: 3rem !important;
+}
+
+/* Remove blanket bottom margin from image containers */
+.case-study-image-container {
+    margin-bottom: 1;
+}
+
+/* Add top margin only to regular body paragraphs following an image, leaving <em> captions snug */
+.markdown-content .case-study-image-container + p:not(:has(em)) {
+    margin-top: 3rem !important;
+}
+
+/* Global spacing between H1 headings and intro deck/copy */
+.work-hero h1,
+.case-intro h1 {
+    margin-bottom: 2rem !important;
+}
