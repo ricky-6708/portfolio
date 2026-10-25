@@ -122,7 +122,7 @@ export const PORTFOLIO_TAXONOMY = {
     path: "content/contact/index.md",
     layout: "Minimalist layout with generous vertical negative space",
     headline: "Let's talk",
-    intro: "Whether you have a complex product challenge, need a senior product designer to lead an end-to-end journey, or want to explore an AI-driven workflow transformation, I'm always open to discussing new opportunities.",
+    intro: "Whether you have a complex product challenge, need a Senior Product Designer to lead an end-to-end journey, or want to explore an AI-driven workflow transformation, I'm always open to discussing new opportunities.",
     cardLayout: "Equal width 2-column grid seating both cards side-by-side",
     cards: [
       {

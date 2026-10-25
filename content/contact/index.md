@@ -1,6 +1,6 @@
 # Let's talk
 
-Whether you have a complex product challenge, need a senior product designer to lead an end-to-end journey, or want to explore an AI-driven workflow transformation, I'm always open to discussing new opportunities.
+Whether you have a complex product challenge, need a Senior Product Designer to lead an end-to-end journey, or want to explore an AI-driven workflow transformation, I'm always open to discussing new opportunities.
 
 <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem;">
   <div>
