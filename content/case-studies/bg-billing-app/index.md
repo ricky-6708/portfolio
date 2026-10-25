@@ -12,7 +12,7 @@ An improved billing experience for British Gas, built to cut avoidable calls, bu
 - **Squad:** Cross-functional
 - **Year:** 2026
 
-![British Gas billing experience hero](./images/billing-hero-banner.jpg)
+![British Gas billing experience hero](/images/billing-hero-banner.jpg)
 
 ## Executive summary
 
