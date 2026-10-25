@@ -145,7 +145,7 @@ export const PORTFOLIO_TAXONOMY = {
   workLandingPage: {
     heroSection: {
       headline: "A closer look at the work I’ve helped shape",
-      paragraph: "Take a peek at my featured projects alongside select foundational work from my career. Explore rigorous user-centered processes and measurable business outcomes, accelerated with a thoughtful pinch of AI to push design velocity further."
+      paragraph: "Explore my featured projects and career work, built by balancing user needs and business goals within technical constraints. By integrating AI into my workflow, I have drastically accelerated design operations and delivery."
     },
     heroTagline: "Featured projects",
     featuredCaseStudies: {
